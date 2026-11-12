@@ -1,0 +1,63 @@
+{
+  "name": "watergirl-teammate",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/main.cjs",
+  "scripts": {
+    "build": "tsc --noEmit && vite build && node scripts/build.mjs",
+    "start": "electron .",
+    "test": "tsx --test tests/*.test.ts",
+    "package:mac": "npm run build && electron-builder --mac dir --arm64"
+  },
+  "dependencies": {
+    "diff": "^8.0.2",
+    "polygon-clipping": "^0.15.7",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0",
+    "esbuild": "^0.28.2",
+    "playwright": "^1.56.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.0"
+  },
+  "build": {
+    "appId": "local.watergirl.teammate",
+    "productName": "Watergirl Teammate",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/main.cjs",
+      "dist/preload.cjs",
+      "dist/ui/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "mac": {
+      "category": "public.app-category.games",
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "identity": null
+    }
+  },
+  "description": "A Watergirl-only Codex teammate for the real Forest Temple game",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabed457/fireboy-watergirl.git"
+  }
+}
