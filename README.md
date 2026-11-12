@@ -57,6 +57,6 @@ App settings, profiles, runs and browser data stay under `~/Library/Application 
 
 ## Contributing
 
-Anyone can fork this public repository and open a pull request. **Only @gabed457 can merge changes into this repository.** See [CONTRIBUTING.md](CONTRIBUTING.md).
+Anyone can fork this public repository and open a pull request. **Merge access is limited to @gabed457 and @TKD498.** Collaborator access takes effect after accepting the GitHub invitation. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 The game is loaded from its normal publisher page. Its game code, art, audio and engine are not distributed here. See [PROVENANCE.md](PROVENANCE.md) for source and dependency notes.
